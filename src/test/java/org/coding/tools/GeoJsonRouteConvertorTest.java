@@ -3,16 +3,18 @@ package org.coding.tools;
 import org.junit.Test;
 
 import java.io.File;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 import static org.junit.Assert.assertTrue;
 
 public class GeoJsonRouteConvertorTest {
 
     @Test
-    public void shouldConvertRoutesToGeoJsonCollection() {
+    public void shouldConvertRoutesToGeoJsonCollection() throws URISyntaxException {
         // given
-        var testFileName = "testdata.csv";
-        var routes = RouteDataReader.readFile(new File(testFileName));
+        var path = Paths.get(ClassLoader.getSystemResource("testdata.csv").toURI());
+        var routes = RouteDataReader.readFile(new File(path.toUri()));
         var convertor = new GeoJsonRouteConvertor();
 
         // when

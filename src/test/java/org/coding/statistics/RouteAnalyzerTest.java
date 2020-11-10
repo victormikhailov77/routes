@@ -6,6 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.File;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -18,9 +20,9 @@ public class RouteAnalyzerTest {
     private static List<Route> loadedRoutes = null;
 
     @BeforeClass
-    public static void loadData() {
-        var testFileName = "testdata.csv";
-        loadedRoutes = RouteDataReader.readFile(new File(testFileName));
+    public static void loadData() throws URISyntaxException {
+        var path = Paths.get(ClassLoader.getSystemResource("testdata.csv").toURI());
+        loadedRoutes = RouteDataReader.readFile(new File(path.toUri()));
     }
 
     @Test

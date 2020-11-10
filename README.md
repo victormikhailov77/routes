@@ -21,21 +21,23 @@ OpenJDK 15 is required for compilation.
 ______________________________________________________________________________________
 PREREQUISITES:
 
-OpenJDK 15 as default JDK.
-check version with java -version:
-openjdk version "15.0.1" 2020-10-20
-OpenJDK Runtime Environment (build 15.0.1+9-18)
-OpenJDK 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)
+OpenJDK 15 as default JDK.<br>
+check version with java -version:<br>
+openjdk version "15.0.1" 2020-10-20<br>
+OpenJDK Runtime Environment (build 15.0.1+9-18)<br>
+OpenJDK 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)<br>
 ______________________________________________________________________________________
 
 BUILD:
-mvn clean package - with unit tests
-mvn clean package -DskipTests - no unit tests
+
+mvn clean package - with unit tests<br>
+mvn clean package -DskipTests - no unit tests<br>
 ______________________________________________________________________________________
+
 RUN:
 
-java --enable-preview -jar target/routes-jar-with-dependencies.jar src/main/resources\DEBRV_DEHAM_historical_routes.csv selectedRoutes.geojson
+java --enable-preview -jar target/routes-jar-with-dependencies.jar src/main/resources\DEBRV_DEHAM_historical_routes.csv selectedRoutes.geojson<br>
 
-where:
-src/main/resources\DEBRV_DEHAM_historical_routes.csv - file with source routes
-selectedRoutes.geojson - output file with results
+where:<br>
+src/main/resources\DEBRV_DEHAM_historical_routes.csv - file with source routes<br>
+selectedRoutes.geojson - output file with results<br>

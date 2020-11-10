@@ -3,18 +3,20 @@ package org.coding.tools;
 import org.junit.Test;
 
 import java.io.File;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 import static org.junit.Assert.assertEquals;
 
 public class RouteDataReaderTest {
 
     @Test
-    public void shouldReadRoutesFromCSVFile() {
+    public void shouldReadRoutesFromCSVFile() throws URISyntaxException {
         //given
-        var testFileName = "testdata.csv";
+        var path = Paths.get(ClassLoader.getSystemResource("testdata.csv").toURI());
 
         // when
-        var routes = RouteDataReader.readFile(new File(testFileName));
+        var routes = RouteDataReader.readFile(new File(path.toUri()));
 
         // then
         assertEquals(4, routes.size());
@@ -29,12 +31,12 @@ public class RouteDataReaderTest {
     }
 
     @Test(expected = RuntimeException.class)
-    public void shouldthrowExceptionWhenMalformedCSV() {
+    public void shouldthrowExceptionWhenMalformedCSV() throws URISyntaxException {
         //given
-        var testFileName = "testdata_malformed.csv";
+        var path = Paths.get(ClassLoader.getSystemResource("testdata_malformed.csv").toURI());
 
         // when
-        RouteDataReader.readFile(new File(testFileName));
+        RouteDataReader.readFile(new File(path.toUri()));
 
         // then throw
 
