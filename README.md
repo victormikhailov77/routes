@@ -34,6 +34,9 @@ Maven home: C:\java\apache-maven-3.6.3\bin\..<br>
 Java version: 15.0.1, vendor: Oracle Corporation, runtime: C:\java\jdk-15.0.1<br>
 Default locale: en_US, platform encoding: Cp1250<br>
 OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"<br>
+
+Download link:<br>
+https://jdk.java.net/15/
 ______________________________________________________________________________________
 
 BUILD:
