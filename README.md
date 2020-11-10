@@ -16,3 +16,26 @@ The program is written on Java 15 with preview features (Records).
 OpenJDK 15 is required for compilation.
 
 ![Alt text](selectedRoutes.PNG?raw=true "Title")
+
+
+______________________________________________________________________________________
+PREREQUISITES:
+
+OpenJDK 15 as default JDK.
+check version with java -version:
+openjdk version "15.0.1" 2020-10-20
+OpenJDK Runtime Environment (build 15.0.1+9-18)
+OpenJDK 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)
+______________________________________________________________________________________
+
+BUILD:
+mvn clean package - with unit tests
+mvn clean package -DskipTests - no unit tests
+______________________________________________________________________________________
+RUN:
+
+java --enable-preview -jar target/routes-jar-with-dependencies.jar src/main/resources\DEBRV_DEHAM_historical_routes.csv selectedRoutes.geojson
+
+where:
+src/main/resources\DEBRV_DEHAM_historical_routes.csv - file with source routes
+selectedRoutes.geojson - output file with results
