@@ -26,6 +26,14 @@ check version with java -version:<br>
 openjdk version "15.0.1" 2020-10-20<br>
 OpenJDK Runtime Environment (build 15.0.1+9-18)<br>
 OpenJDK 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)<br>
+
+Maven configured to use JDK 15 (via JAVA_HOME set to default JDK).<br>
+check version of java in maven with mvn -version:<br>
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)<br>
+Maven home: C:\java\apache-maven-3.6.3\bin\..<br>
+Java version: 15.0.1, vendor: Oracle Corporation, runtime: C:\java\jdk-15.0.1<br>
+Default locale: en_US, platform encoding: Cp1250<br>
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"<br>
 ______________________________________________________________________________________
 
 BUILD:
