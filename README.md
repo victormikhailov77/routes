@@ -15,4 +15,4 @@ The output is geojson file, which can be visualized in the web app geojson.io: o
 The program is written on Java 15 with preview features (Records). 
 OpenJDK 15 is required for compilation.
 
-![Alt text](selectedRoutes.png?raw=true "Title")
+![Alt text](blob/master/selectedRoutes.PNG?raw=true "Title")
