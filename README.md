@@ -6,6 +6,8 @@ Find the most representative ship route between two points, from the given histo
 1. Reduce big data set to small statistically significant data set , using normal distribution and Z-score(constant) by two factors (route duration and length). 
 This operation discards routes, which have big deviation from shortest or more obvious path , what can be caused by bad weather, emergency, or navigation error.
 
+![Alt text](original_vs_reduced.png?raw=true "Reduced route set")
+
 2. Find overlapping set between sets filtered by duration and length. This would be rather small set, like 7-10 routes.
 
 3. In this final set, find the route, which has minimal deviation from avg  duration or segment count (this is strategy switchable in the code)
@@ -15,7 +17,7 @@ The output is geojson file, which can be visualized in the web app geojson.io: o
 The program is written on Java 15 with preview features (Records). 
 OpenJDK 15 is required for compilation.
 
-![Alt text](selectedRoutes.PNG?raw=true "Title")
+![Alt text](selectedRoutes.PNG?raw=true "Selected route")
 
 
 ______________________________________________________________________________________
